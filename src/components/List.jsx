@@ -8,7 +8,7 @@ import "./list.css";
 let waarde = "";
 let refid = 0;
 
-class List extends Component {
+class List extends React.Component {
   constructor() {
     super();
     this.state = {
