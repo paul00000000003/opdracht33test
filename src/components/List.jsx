@@ -17,7 +17,7 @@ class List extends React.Component {
       winkelMandje: [],
       nieuwItem: "",
     };
-    //this.clickItem = this.clickItem.bind(this);
+    this.clickItem = this.clickItem.bind(this);
     this.leegWinkelmand = this.leegWinkelmand.bind(this);
     this.voegItemToe = this.voegItemToe.bind(this);
   }
@@ -50,7 +50,7 @@ class List extends React.Component {
       nieuwItem.value = "";
     } else alert("Om een item toe te voegen moet je wel wat invullen");
   }
-  /*
+
   clickItem(id) {
     let winkelMandjeArr = this.state.winkelMandje;
     let doorgaan = "J";
@@ -80,7 +80,6 @@ class List extends React.Component {
       }
     }
   }
-*/
 
   componentDidMount() {
     groceryItems = [];
