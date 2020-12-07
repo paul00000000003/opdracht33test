@@ -6,6 +6,8 @@ import "./list.css";
 import InputField from "./InputField";
 
 let groceryItems = [];
+let refid = 0;
+let waarde = "";
 
 class List extends React.Component {
   constructor() {
@@ -16,11 +18,10 @@ class List extends React.Component {
       nieuwItem: "",
     };
     //this.clickItem = this.clickItem.bind(this);
-    //this.leegWinkelmand = this.leegWinkelmand.bind(this);
-    //this.voegItemToe = this.voegItemToe.bind(this);
+    this.leegWinkelmand = this.leegWinkelmand.bind(this);
+    this.voegItemToe = this.voegItemToe.bind(this);
   }
 
-  /*
   leegWinkelmand() {
     this.setState({ winkelMandje: [] });
   }
@@ -49,7 +50,7 @@ class List extends React.Component {
       nieuwItem.value = "";
     } else alert("Om een item toe te voegen moet je wel wat invullen");
   }
-
+  /*
   clickItem(id) {
     let winkelMandjeArr = this.state.winkelMandje;
     let doorgaan = "J";
@@ -79,12 +80,6 @@ class List extends React.Component {
       }
     }
   }
-*/
-  /*
-
-*/
-  /*
-
 */
 
   componentDidMount() {
