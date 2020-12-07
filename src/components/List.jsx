@@ -1,6 +1,5 @@
 import React from "react";
 
-import React from "react";
 //import ListItem from "./ListItem";
 //import Mandje from "./Mandje";
 import "./list.css";
