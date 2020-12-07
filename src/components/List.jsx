@@ -11,7 +11,7 @@ let refid = 0;
 class List extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = { groceryItems: [] };
   }
 
   render() {
