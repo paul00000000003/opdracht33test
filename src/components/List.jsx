@@ -1,12 +1,5 @@
 import React from "react";
-
-//import ListItem from "./ListItem";
-//import Mandje from "./Mandje";
 import "./list.css";
-//import InputField from "./InputField";
-
-let waarde = "";
-let refid = 0;
 
 class List extends React.Component {
   constructor() {
