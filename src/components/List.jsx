@@ -55,7 +55,6 @@ class List extends React.Component {
     let winkelMandjeArr = this.state.winkelMandje;
     let doorgaan = "J";
     refid = 0;
-    /*
     if (winkelMandjeArr.length !== 0) {
       winkelMandjeArr.map((item) => {
         if (item.id === id)
@@ -68,9 +67,9 @@ class List extends React.Component {
             doorgaan = "pasAmountAan";
             item.amount = this.state.groceryItems[id - 1].amount;
           }
+        return item;
       });
     }
-    */
     if (doorgaan === "J") {
       const boodschapItem = this.state.groceryItems[id - 1];
       let aangepastWinkelmandje = this.state.winkelMandje;
@@ -84,11 +83,11 @@ class List extends React.Component {
   }
 
   componentDidMount() {
-    groceryItems = [];
     groceryItems.push({ id: 1, titel: "Rijst", amount: 1 });
     groceryItems.push({ id: 2, titel: "Aardappelen", amount: 1 });
     groceryItems.push({ id: 3, titel: "Melk", amount: 1 });
     groceryItems.push({ id: 4, titel: "mango's", amount: 1 });
+
     this.setState({ groceryItems: groceryItems });
   }
 
