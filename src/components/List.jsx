@@ -1,9 +1,9 @@
 import React from "react";
 import "./list.css";
-//import ListItem from "./ListItem";
-//import Mandje from "./Mandje";
+import ListItem from "./ListItem";
+import Mandje from "./Mandje";
 import "./list.css";
-//import InputField from "./InputField";
+import InputField from "./InputField";
 
 let groceryItems = [];
 
@@ -81,33 +81,10 @@ class List extends React.Component {
   }
 */
   /*
-  <div className="lijstjes">
-  <div className="lijstje">
-    <h1>Boodschappenlijst</h1>
-    <InputField voegItemToe={this.voegItemToe} />
-    <ul>{groceryItems2}</ul>
-  </div>
-  <div className="lijstje2">
-    <h1>Winkelmandje</h1>
-    <button id="deleteKnop" onClick={this.leegWinkelmand}>
-      Leeg de winkelmand
-    </button>
-    <ul id="winkelmandje">{winkelMandje2}</ul>
-  </div>
-</div>
+
 */
   /*
-let groceryItems2 = this.state.groceryItems.map((element) => (
-  <ListItem
-    key={element.id}
-    item={element}
-    clickItem={this.clickItem}
-    className="list-item"
-  />
-));
-let winkelMandje2 = this.state.winkelMandje.map((element) => (
-  <Mandje key={element.id} item={element} className="mandje-item" />
-));
+
 */
 
   componentDidMount() {
@@ -120,9 +97,34 @@ let winkelMandje2 = this.state.winkelMandje.map((element) => (
   }
 
   render() {
+    let groceryItems2 = this.state.groceryItems.map((element) => (
+      <ListItem
+        key={element.id}
+        item={element}
+        clickItem={this.clickItem}
+        className="list-item"
+      />
+    ));
+    let winkelMandje2 = this.state.winkelMandje.map((element) => (
+      <Mandje key={element.id} item={element} className="mandje-item" />
+    ));
     return (
       <div>
         <h1 className="algBoodschap">Boodschappenlijst</h1>
+        <div className="lijstjes">
+          <div className="lijstje">
+            <h1>Boodschappenlijst</h1>
+            <InputField voegItemToe={this.voegItemToe} />
+            <ul>{groceryItems2}</ul>
+          </div>
+          <div className="lijstje2">
+            <h1>Winkelmandje</h1>
+            <button id="deleteKnop" onClick={this.leegWinkelmand}>
+              Leeg de winkelmand
+            </button>
+            <ul id="winkelmandje">{winkelMandje2}</ul>
+          </div>
+        </div>
       </div>
     );
   }
