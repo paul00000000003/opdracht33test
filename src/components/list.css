@@ -5,4 +5,63 @@
   color: white;
   text-align: center;
 }
+
+.lijstjes {
+  width: 1300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lijstje {
+  margin: 30px;
+  width: 650px;
+}
+
+.lijstje2 {
+  width: 500px;
+  margin-top: 30px;
+}
+
+.list-item,
+.mandje-item,
+#nieuwItem {
+  width: 300px;
+  height: 2em;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+#nieuwItem {
+  margin: 20px;
+}
+
+#toevoegKnop {
+  height: 2em;
+  width: 300px;
+  font-size: 20px;
+}
+
+#deleteKnop {
+  height: 2em;
+  width: 300px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.list-item:nth-child(odd) {
+  background-color: #cfb5cf;
+}
+
+.list-item:nth-child(even) {
+  background-color: #5a475a;
+}
+
+.mandje-item:nth-child(odd) {
+  background-color: #454564;
+}
+
+.mandje-item:nth-child(even) {
+  background-color: blue;
+}
 /*# sourceMappingURL=list.css.map */
