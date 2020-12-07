@@ -55,6 +55,7 @@ class List extends React.Component {
     let winkelMandjeArr = this.state.winkelMandje;
     let doorgaan = "J";
     refid = 0;
+    /*
     if (winkelMandjeArr.length !== 0) {
       winkelMandjeArr.map((item) => {
         if (item.id === id)
@@ -69,6 +70,7 @@ class List extends React.Component {
           }
       });
     }
+    */
     if (doorgaan === "J") {
       const boodschapItem = this.state.groceryItems[id - 1];
       let aangepastWinkelmandje = this.state.winkelMandje;
