@@ -55,19 +55,18 @@ class List extends React.Component {
     let winkelMandjeArr = this.state.winkelMandje;
     let doorgaan = "J";
     refid = 0;
+    groceryItems = this.state.groceryItems;
     if (winkelMandjeArr.length !== 0) {
-      winkelMandjeArr.map((item) => {
+      winkelMandjeArr.forEach((item) => {
         if (item.id === id)
-          if (this.state.groceryItems[id - 1].amount === item.amount) {
+          if (groceryItems[id - 1].amount === item.amount) {
             doorgaan = "N";
             alert(
               "Deze boodschap ligt met bijbehorend aantal al in het winkelmandje"
             );
           } else {
             doorgaan = "pasAmountAan";
-            item.amount = this.state.groceryItems[id - 1].amount;
           }
-        return item;
       });
     }
     if (doorgaan === "J") {
